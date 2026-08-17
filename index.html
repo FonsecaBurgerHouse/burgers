@@ -808,20 +808,20 @@
   <script>
     // Dados do cardápio
     const ADDONS = [
-      { id: 'bacon', name: 'Bacon crocante', price: 4.00 },
-      { id: 'burger120', name: 'Hambúrguer extra', price: 7.90 },
-      { id: 'cheddar', name: 'Cheddar', price: 3.00 },
+      { id: 'bacon', name: 'Bacon crocante', price: 3.00 },
+      { id: 'burger120', name: 'Hambúrguer extra', price: 7.00 },
+      { id: 'cheddar', name: 'Cheddar', price: 2.00 },
       { id: 'mucarela', name: 'Muçarela', price: 2.00 },
-      { id: 'cebola', name: 'Cebola caramelizada', price: 3.00 },
+      { id: 'cebola', name: 'Cebola caramelizada', price: 2.00 },
       { id: 'molho', name: 'Molho da casa', price: 2.50 },
     ];
 
     const COMBOS = [
-      { id: 'combo-original', image: 'https://i.postimg.cc/fbxytVNJ/combo-original.webp', name: 'Combo Original', price: 29.90, desc: 'Pão brioche, hambúrguer artesanal, molho especial e queijo à sua escolha (cheddar ou muçarela).' },
-      { id: 'combo-cheddar', image: 'https://i.postimg.cc/ht8RVTfC/combo-pig-cheddar.webp', name: 'Combo Pig Cheddar', price: 34.90, desc: 'Pão brioche, hambúrguer artesanal, molho especial, queijo cheddar e bacon crocante.' },
-      { id: 'combo-cheddar-caramelizado', image: 'https://i.postimg.cc/ht8RVTfC/combo-pig-cheddar.webp', name: 'Combo Cheddar Caramelizado', price: 34.90, desc: 'Pão brioche, hambúrguer artesanal, molho da casa, queijo cheddar e cebola caramelizada. ' },
-      { id: 'combo-bacon', image: 'https://i.postimg.cc/Qx33CfM4/combo-big-one.webp', name: 'Combo The Big One', price: 37.90, desc: 'Pão brioche, hambúrguer artesanal, molho especial, queijo (cheddar ou muçarela), bacon crocante e cebola caramelizada. ' },
-      { id: 'combo-cheddar-duplo', image: 'https://i.postimg.cc/YqpsTZ0c/combo-duplo.webp', name: 'Combo Cheddar Duplo', price: 41.00, desc: 'Pão, 2 hambúrguers artesanais + cheddar, molho especial e cebola caramelizada. ' },
+      { id: 'combo-original', image: 'https://i.postimg.cc/fbxytVNJ/combo-original.webp', name: 'Combo Original', price: 31.90, desc: 'Pão brioche, hambúrguer artesanal, molho especial e queijo à sua escolha (cheddar ou muçarela).' },
+      { id: 'combo-cheddar', image: 'https://i.postimg.cc/ht8RVTfC/combo-pig-cheddar.webp', name: 'Combo Pig Cheddar', price: 36.90, desc: 'Pão brioche, hambúrguer artesanal, molho especial, queijo cheddar e bacon crocante.' },
+      { id: 'combo-cheddar-caramelizado', image: 'https://i.postimg.cc/ht8RVTfC/combo-pig-cheddar.webp', name: 'Combo Cheddar Caramelizado', price: 36.90, desc: 'Pão brioche, hambúrguer artesanal, molho da casa, queijo cheddar e cebola caramelizada. ' },
+      { id: 'combo-bacon', image: 'https://i.postimg.cc/Qx33CfM4/combo-big-one.webp', name: 'Combo The Big One', price: 39.90, desc: 'Pão brioche, hambúrguer artesanal, molho especial, queijo (cheddar ou muçarela), bacon crocante e cebola caramelizada. ' },
+      { id: 'combo-cheddar-duplo', image: 'https://i.postimg.cc/YqpsTZ0c/combo-duplo.webp', name: 'Combo Cheddar Duplo', price: 43.00, desc: 'Pão, 2 hambúrguers artesanais + cheddar, molho especial e cebola caramelizada. ' },
     ];
 
     const BURGERS = [
@@ -833,12 +833,12 @@
     ];
 
     const POTATOES = [
-      { id: 'bp', image:'https://s2-receitas.glbimg.com/6TYFXwek9ZpNXFeOzas09KizMKk=/0x0:1280x853/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2020/T/K/Hh8h2GR96v392DAkAqyA/912c9713-321e-4dfd-bca9-888c05c5ce50.jpeg', name: 'Batata Pequena', price: 6.00, desc: 'Porção de batata frita pequena, crocante e sequinha.' },
+      { id: 'bp', image:'https://s2-receitas.glbimg.com/6TYFXwek9ZpNXFeOzas09KizMKk=/0x0:1280x853/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2020/T/K/Hh8h2GR96v392DAkAqyA/912c9713-321e-4dfd-bca9-888c05c5ce50.jpeg', name: 'Batata Pequena', price: 7.00, desc: 'Porção de batata frita pequena, crocante e sequinha.' },
       { id: 'bm', image:'https://s2-receitas.glbimg.com/6TYFXwek9ZpNXFeOzas09KizMKk=/0x0:1280x853/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2020/T/K/Hh8h2GR96v392DAkAqyA/912c9713-321e-4dfd-bca9-888c05c5ce50.jpeg', name: 'Batata Média', price: 10.00, desc: 'Porção de batata frita média, crocante e sequinha.' },
     ];
 
     const DRINKS = [
-      { id: 'ref', image:'https://guiadossolteiros.com/wp-content/uploads/2012/11/refrigerante-com-gas.jpg',name: 'Refrigerante Lata', price: 6.00, desc: 'Refrigerante gelado de350ml.' },
+      { id: 'ref', image:'https://guiadossolteiros.com/wp-content/uploads/2012/11/refrigerante-com-gas.jpg',name: 'Refrigerante Lata', price: 7.00, desc: 'Refrigerante gelado de350ml.' },
     ];
 
     let cart = [];
