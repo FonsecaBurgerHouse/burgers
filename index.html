@@ -8,6 +8,112 @@
   <link rel="icon" type="image/png" sizes="32x32" href="https://i.postimg.cc/Bvhng7L7/cc21d796204923937547f509844f7eba-hamburger-icon-hamburger.webp">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
+  /* Fundo do popup */
+  #hamburgueria-fechada {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    background: rgba(0, 0, 0, 0.82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Caixa */
+  .popup-fechada {
+    width: 100%;
+    max-width: 460px;
+    background: #111;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 45px 30px;
+    text-align: center;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.6);
+    animation: popupEntrada 0.4s ease-out;
+  }
+
+  .popup-fechada .icone {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .popup-fechada h2 {
+    margin: 0 0 15px;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .popup-fechada p {
+    margin: 0;
+    color: #bdbdbd;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .popup-fechada .destaque {
+    display: block;
+    margin-top: 18px;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  @keyframes popupEntrada {
+    from {
+      opacity: 0;
+      transform: scale(0.94) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  /* Impede scroll da página */
+  body.popup-bloqueado {
+    overflow: hidden !important;
+  }
+
+  @media (max-width: 480px) {
+    .popup-fechada {
+      padding: 38px 24px;
+    }
+
+    .popup-fechada h2 {
+      font-size: 26px;
+    }
+
+    .popup-fechada p {
+      font-size: 16px;
+    }
+  }
+</style>
+
+<div id="hamburgueria-fechada">
+  <div class="popup-fechada">
+
+    <div class="icone">🍔</div>
+
+    <h2>Estamos fechados</h2>
+
+    <p>
+      A hamburgueria está fechada no momento.
+    </p>
+
+    <span class="destaque">
+      Voltamos em alguns dias! ❤️
+    </span>
+
+  </div>
+</div>
+
+<script>
+  document.body.classList.add('popup-bloqueado');
+</script>
+  <style>
     :root {
       --bg: #0C0D14;
       --bg-surface: #121420;
