@@ -364,7 +364,7 @@
 
     .btn-add:active { transform: scale(.97); }
 
-    /* Ajustes específicos para celular (2 colunas) */
+    /* Ajustes específicos para celular (2 colunas + Imagens verticais completas) */
     @media (max-width: 639px) {
       .container {
         padding: 1.2rem 0.6rem;
@@ -375,8 +375,15 @@
         border-radius: 14px;
       }
       .card-img-wrapper {
-        height: 120px;
+        height: 185px; /* Aumentado proporcionalmente para exibir a arte por completo */
         border-radius: 10px;
+        background: #000; /* Fundo escuro para preencher caso a proporção exija */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card-image {
+        object-fit: contain; /* Exibe a imagem inteira sem cortar nenhuma borda */
       }
       .card-header {
         flex-direction: column;
